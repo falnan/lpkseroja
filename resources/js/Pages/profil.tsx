@@ -1,21 +1,5 @@
 import Contact from "@/Components/contact";
 import Navbar from "@/Components/navbar";
-import { title } from "process";
-
-const navigation = [
-    {
-        title: "Home",
-        path: "/",
-        isDrapdown: false,
-    },
-    {
-        title: "Profil",
-        path: "/profil",
-        isDrapdown: false,
-    },
-    { title: "Artikel", path: "/artikel", isDrapdown: false },
-    { title: "Dokumentasi", path: "/dokumentasi", isDrapdown: false },
-];
 
 const profil = [
     {
@@ -45,9 +29,19 @@ const profil = [
         ],
     },
     {
+        title: "Akta Pendirian",
+        descNav: false,
+        desc: "NO 33 19 AGUSTUS 2016",
+    },
+    {
+        title: "Sertifikat Standar/ Tanggal Terbit",
+        descNav: false,
+        desc: "10022300726290001/ 17 Oktober 2023",
+    },
+    {
         title: "Nomor Induk Berusaha/ Tanggal Terbit",
         descNav: false,
-        desc: "1002230072629/ 10 Februari 2023",
+        desc: "1002230072629/ 17 Februari 2023",
     },
     {
         title: "SIO SatPen Non Formal dan Informal",
@@ -78,6 +72,16 @@ export default function Profil() {
                         </h1>
                     </div>
                     <div className="max-w-screen-md mx-auto bg-white  rounded shadow-md border border-slate-300 mt-8 p-8">
+                        <div>
+                            <h2 className="text-slate-700 text-center font-bold text-xl">
+                                Struktur Organisasi
+                            </h2>
+                            <img
+                                className="mx-auto"
+                                src="/img/struktur.png"
+                                alt=""
+                            />
+                        </div>
                         {profil.map((i: any) => (
                             <div className=" md:px-8 mb-8" key={i.title}>
                                 <h2 className="text-slate-700 text-center font-bold text-xl">

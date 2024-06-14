@@ -11,10 +11,7 @@ class MainController extends Controller
 {
     public function home()
     {
-        $blog = Article::orderBy('date', 'desc')
-            ->paginate(4);
-        return Inertia::render('home')
-            ->with('blog', $blog);
+        return Inertia::render('home');
     }
     public function profil()
     {
@@ -22,20 +19,9 @@ class MainController extends Controller
     }
     public function program(Request $request)
     {
-        $program = Article::where('body', 'like', '%' . $request->search . '%')
-            ->orwhere('title', 'like', '%' . $request->search . '%')
-            ->orderBy('date', 'desc')
-            ->paginate(10);
+        return Inertia::render('program');
+    }
 
-        return Inertia::render('program')
-            ->with('program', $program);
-    }
-    public function articleShow(String $id)
-    {
-        $article = Article::find($id);
-        return Inertia::render('articleShow')
-            ->with('article', $article);
-    }
     public function documentation()
     {
         return Inertia::render('documentation');
@@ -48,5 +34,9 @@ class MainController extends Controller
     {
         session()->flash('message', 'success');
         return redirect('/');
+    }
+    public function privacy()
+    {
+        return Inertia::render('privacy');
     }
 }

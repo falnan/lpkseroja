@@ -8,7 +8,8 @@ export default function Graduated(props: any) {
                     </h3>
                     <p className="mt-3 text-gray-300">
                         LPK Seroja telah meluluskan lebih dari 1000 alumni yang
-                        telah bekerja di berbagai tempat.
+                        telah bekerja di berbagai tempat dan berwirausaha
+                        mandiri.
                     </p>
                 </div>
                 <div className="mt-12">

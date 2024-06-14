@@ -11,3 +11,4 @@ Route::get('/fasilitas', [MainController::class, 'documentation']);
 Route::get('/kebijakan', [MainController::class, 'policy']);
 Route::get('/daftar', [MainController::class, 'register']);
 Route::post('/daftar', [MainController::class, 'registerPost']);
+Route::get('/kebijakan-privasi', [MainController::class, 'privacy']);
