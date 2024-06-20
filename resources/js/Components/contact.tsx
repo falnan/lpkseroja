@@ -1,5 +1,3 @@
-import { Link } from "@inertiajs/react";
-
 export default () => {
     const contactMethods = [
         {
@@ -25,7 +23,7 @@ export default () => {
                 </svg>
             ),
             contact:
-                "Jl. Utama Pangkalan Batang, RT 001, RW 001, Desa Pangkalan Batang Barat, Kecamatan Bengkalis, Kabupaten Bengkalis.",
+                "Jl. Pangkalan Batang, RT 001, RW 001, Desa Pangkalan Batang Barat, Kecamatan Bengkalis, Kabupaten Bengkalis.",
             title: "Alamat",
         },
         {
@@ -100,7 +98,7 @@ export default () => {
                         ))}
                     </ul>
                     <div className="border-t mt-8 -mb-2"></div>
-                    <div className="flex flex-col mt-8 -mb-8 lg:flex-row lg:justify-between sm:flex content-center">
+                    <div className="flex mt-8 -mb-8 justify-between sm:flex content-center">
                         <div className="">
                             &copy; Copyright 2024{" "}
                             <span className="font-bold">
@@ -108,16 +106,6 @@ export default () => {
                             </span>{" "}
                             Design by{" "}
                             <span className="font-bold">Falna Techno.</span>
-                        </div>
-                        <div className="flex gap-2">
-                            <p> Syarat dan ketentuan</p>{" "}
-                            <Link
-                                className="font-bold"
-                                href="/kebijakan-privasi"
-                            >
-                                {" "}
-                                Kebijakan Privasi
-                            </Link>
                         </div>
                     </div>
                 </div>

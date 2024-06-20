@@ -1,5 +1,6 @@
 import { Link, router } from "@inertiajs/react";
 import { useEffect, useState } from "react";
+import Button from "./button";
 
 const navigation = [
     {
@@ -40,18 +41,19 @@ export default function Navbar(props: any) {
             >
                 <div className="items-center gap-x-14 px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <Link href="/" className=" flex flex-row items-center">
-                            <img
-                                className="size-16"
-                                src="/img/logo.jpeg"
-                                alt="Float UI logo"
-                            />
-
+                        <div className="flex flex-row items-center">
+                            <Link href="/">
+                                <img
+                                    className="size-16"
+                                    src="/img/logo.jpeg"
+                                    alt="Float UI logo"
+                                />
+                            </Link>
                             <div className="ml-1 font-bold text-slate-600 text-2xl leading-5">
                                 LPK <br />
                                 <span> Seroja</span>
                             </div>
-                        </Link>
+                        </div>
                         <div className="md:hidden">
                             <button
                                 className="text-gray-500 hover:text-gray-800"

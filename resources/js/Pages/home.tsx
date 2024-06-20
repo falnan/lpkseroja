@@ -1,5 +1,7 @@
+import AfterHero from "@/Components/afterHero";
 import Blog from "@/Components/blog";
 import Contact from "@/Components/contact";
+import Footer from "@/Components/footer";
 import Graduated from "@/Components/graduated";
 import Hero from "@/Components/hero";
 import { IconArrowForward, IconFile } from "@/Components/icons";
@@ -33,7 +35,7 @@ const information = [
     },
     {
         name: "Struktur Organisasi",
-        link: "https://drive.google.com/file/d/1DOTHFj4BQLLPCXybL9sdAkGlL60XXGMx/view?usp=sharing",
+        link: "#",
     },
     {
         name: "Persyaratan Mengikuti Pelatihan",
@@ -47,7 +49,7 @@ const information = [
 
 const team = [
     {
-        avatar: "/img/person/tina.jpg",
+        avatar: "/img/person/tina.png",
         name: "Titin Agustina, S.Pd.I",
         title: "Pimpinan",
     },
@@ -64,7 +66,7 @@ const team = [
     {
         avatar: "/img/person/ridho.jpeg",
         name: "Muhammad Ridho Nosa, S.T, M.Kom",
-        title: "Instruktur Kewirausahaan (Kompeten di Bidang Graphic Designer)",
+        title: "Instruktur Kewirausahaan",
     },
     {
         avatar: "/img/person/elly.jpeg",
@@ -74,22 +76,13 @@ const team = [
     {
         avatar: "/img/person/erik.jpeg",
         name: "Erik Maunanta",
-        title: "Instruktur Kewirausahaan (Kompeten di Bidang Tenaga Sales Person",
-    },
-    {
-        avatar: "/img/person/eka.jpg",
-        name: "Eka Fajri, S.Pd",
         title: "Instruktur Tata Rias Pengantin",
     },
+
     {
-        avatar: "/img/person/dm.jpeg",
-        name: "Dwi Astuti, SE., M.Si",
-        title: "Instruktur Marketing (Kompeten di Bidang Administrasi Profesional dan Digital Marketing)",
-    },
-    {
-        avatar: "/img/person/tika.jpeg",
-        name: "Nazrantika Sunarto, SE., M.M",
-        title: "Instruktur Marketing (Kompeten di Bidang Digital Marketing)",
+        avatar: "/img/avatar.png",
+        name: "Eka Fajri, S.Pd",
+        title: "Instruktur Tata Rias Pengantin",
     },
     {
         avatar: "/img/avatar.png",
@@ -118,7 +111,7 @@ const team = [
     },
 ];
 
-export default function Home() {
+export default function Home({ blog }: any) {
     const { flash }: any = usePage().props;
     {
         flash == "success" &&
@@ -135,8 +128,8 @@ export default function Home() {
         <>
             {view && (
                 <Toast clickForClose={() => setView(false)}>
-                    Lembaga Pelatihan Kerja Seroja menyediakan pelatihan reguler
-                    dan gratis untuk masyarakat. Tertarik?
+                    Lembaga Pelatihan Kerja Seroja berkolaborasi pemerintah
+                    menyediakan pelatihan gratis untuk masyarakat. Tertarik?
                     <Link
                         href="/"
                         className="ml-2 font-semibold underline duration-150 hover:text-indigo-100"
@@ -153,9 +146,10 @@ export default function Home() {
                             LPK SEROJA
                         </h2>
                         <p>
-                            Lembaga Pelatihan Kerja yang bergerak dibidang
-                            kecantikan seperti tatarias pengantin, tata
-                            kecantikan rambut dan tata kecantikan kulit.
+                            Lembaga Pelatihan Kerja Seroja bergerak dibidang
+                            layanan kursus dan pelatihan kecantikan seperti
+                            tatarias pengantin, tata kecantikan rambut dan tata
+                            kecantikan kulit.
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <Link
@@ -177,13 +171,10 @@ export default function Home() {
             </div>
 
             <Graduated stats={stats} />
-            <div className="mt-8">
-                <img className="mx-auto" src="/img/akreditasi3.png" alt="" />
-            </div>
             <Program />
             <div className="grid lg:grid-cols-3">
                 <div className="lg:col-span-2">
-                    <Blog />
+                    <Blog blog={blog.data} />
                 </div>
                 <div className="flex flex-col gap-8 lg:mt-8 mx-8 lg:mr-8">
                     <div className="p-4 border border-gray-300 bg-white shadow-md rounded-md">
